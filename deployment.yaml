@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: java-oracle
+spec: {}
+status: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: payara
+  name: payara
+  namespace: java-oracle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payara
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: payara
+    spec:
+      containers:
+      - image: payara/micro
+        name: micro
+        resources: {}
+status: {}
