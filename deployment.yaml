@@ -27,7 +27,7 @@ spec:
         app: payara
     spec:
       containers:
-      - image: payara/micro
+      - image: payara-micro:k8s
         name: micro
         ports:
         - containerPort: 8080
