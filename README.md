@@ -19,6 +19,9 @@ docker imageの作成完了後、`/java-oracle-on-Rancher`配下でKubernetesリ
 kubectl create -f .
 ```
 
-### Oracle Database for M1 Macについて
-以下、公式GitHub issueで取り上げられているが、現時点でM1 Macについてサポートしていない。
+### Oracle Databaseについて
+以下から、該当するOracle DatabaseのImageを取得する。
+https://container-registry.oracle.com/
+
+また、現時点で公式GitHub issueで取り上げられているが、M1 Macについてサポートしていない。公式Imageが動作しないことも確認済。
 https://github.com/oracle/docker-images/discussions/1951
