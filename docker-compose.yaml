@@ -1,0 +1,17 @@
+# 編集中
+version: '3'
+services:
+
+  service:
+    build: ./build/payara/
+    container_name: payara
+    restart: always
+    ports:
+      - 8080:8080
+
+  database:
+    images: container-registry.oracle.com/database/enterprise:21.3.0.0
+    container_name: oracle
+    restart: always
+    ports:
+      - 10080:1521
